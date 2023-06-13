@@ -1,0 +1,17 @@
+version: "3.9"
+
+x-base: &base
+  image: lukzmu_gitlab_io
+  env_file: .env
+  volumes:
+    - .:/app
+
+services:
+  web:
+    <<: *base
+    build:
+      context: .
+      dockerfile: ./compose/Dockerfile
+    command: runserver
+    ports:
+      - "8000:8000"

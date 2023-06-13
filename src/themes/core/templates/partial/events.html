@@ -1,0 +1,27 @@
+<div id="timeline" class="hero h-96">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-3xl font-bold">Timeline</h1>
+      <p class="py-6 -mt-4">Events important to us.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container grid place-items-center mb-32">
+    <ul class="steps steps-vertical">
+        {% for event in SITE_DATA.events %}
+            {% set sub_margin = "mt-6 mb-6" if event.subtitle else "" %}
+            {% set font_style = "font-bold" if event.important else "" %}
+            {% set font_color = "text-green-500" if event.important else "" %}
+            <li data-content="{{ event.icon }}" class="step">
+                <div class="grid grid-cols-1 justify-items-start {{ sub_margin }}">
+                    <div class="text-sm font-thin">{{ event.date }}</div>
+                    <div class="text-sm {{ font_style }} {{ font_color }}">{{ event.title }}</div>
+                    {% if event.subtitle %}
+                        <div class="text-xs">{{ event.subtitle }}</div>
+                    {% endif %}                        
+                </div>                    
+            </li>
+        {% endfor %}
+    </ul>
+</div>

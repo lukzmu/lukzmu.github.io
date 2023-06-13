@@ -1,0 +1,120 @@
+items:
+  - title: Anna receives a PhD in Animal Sciences
+    subtitle: University of Warmia and Mazury in Olsztyn.
+    date: March 2023
+    icon: 🎓
+  - title: Land acquired in Kikity, Poland
+    date: February 2023
+    icon: 🏕️
+  - title: Geralt is adopted
+    date: January 2022
+    icon: 🐱
+  - title: Trip to Canada
+    date: December 2021
+    icon: 🇨🇦
+  - title: Vader is adopted
+    date: November 2021
+    icon: 🐴
+  - title: 'Family car "Lambert" is bought'
+    date: July 2021
+    icon: 🚗
+  - title: Baine is adopted
+    date: May 2021
+    icon: 🐴
+  - title: Anna and Łukasz get married
+    subtitle: May the 4th be with you!
+    date: May 2021
+    important: true
+    icon: 👰🏻‍♀️
+  - title: Anna and Łukasz join Barbarzyńcy
+    date: April 2021
+    icon: 🕹️
+  - title: Simba is adopted
+    date: March 2021
+    icon: 🐭
+  - title: Łukasz starts job at Merixstudio
+    date: September 2020
+    icon: 💼
+  - title: Łukasz starts job at Butter
+    date: July 2018
+    icon: 💼
+  - title: Anna receives a MSc in Biotechnology
+    subtitle: University of Warmia and Mazury in Olsztyn.
+    date: July 2018
+    icon: 🎓
+  - title: Anna and Łukasz get engaged
+    date: September 2017
+    important: true
+    icon: 💍
+  - title: Trip to UAE
+    date: September 2017
+    icon: 🇦🇪
+  - title: Rey and Asajj are adopted
+    date: April 2017
+    icon: 🐭
+  - title: Anna receives a BSc in Biotechnology
+    subtitle: University of Warmia and Mazury in Olsztyn.
+    date: February 2017
+    icon: 🎓
+  - title: Trip to Czech Republic
+    date: December 2016
+    icon: 🇨🇿
+  - title: Anna and Łukasz get together
+    date: November 2016
+    important: true
+    icon: 🥰
+  - title: Łukasz starts job at UWM
+    date: October 2016
+    icon: 💼
+  - title: Kotek is adopted
+    date: September 2016
+    icon: 🐱
+  - title: Łukasz receives a MSc in Information Technology
+    subtitle: University of Warmia and Mazury in Olsztyn.
+    date: July 2016
+    icon: 🎓
+  - title: Wifi is adopted
+    date: October 2015
+    icon: 🐶
+  - title: Łukasz starts job at Treesat
+    date: October 2015
+    icon: 💼
+  - title: Łukasz receives a BSc in Information Technology
+    subtitle: University of Warmia and Mazury in Olsztyn.
+    date: May 2014
+    icon: 🎓
+  - title: Fifi and Stefa Jr. are adopted
+    date: April 2014
+    icon: 🐭
+  - title: Garfield is adopted
+    date: July 2013
+    icon: 🐱
+  - title: Anna goes to University
+    subtitle: University of Warmia and Mazury in Olsztyn.
+    date: October 2012
+    icon: 🎓
+  - title: Anna and Łukasz meet for the first time
+    date: September 2012
+    important: true
+    icon: 😮
+  - title: Luna and Stefa are adopted
+    date: February 2011
+    icon: 🐭
+  - title: Łukasz starts job at ITM Software House
+    date: September 2010
+    icon: 💼
+  - title: Łukasz goes to University
+    subtitle: University of Warmia and Mazury in Olsztyn.
+    date: October 2009
+    icon: 🎓
+  - title: Bingo is adopted
+    date: November 1998
+    icon: 🐶
+  - title: Anna is born
+    date: April 1993
+    important: true
+    icon: 🍼
+  - title: Łukasz is born
+    date: May 1989
+    important: true
+    icon: 🍼

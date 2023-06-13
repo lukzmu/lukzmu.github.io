@@ -1,0 +1,26 @@
+<div id="animals" class="hero h-96">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-3xl font-bold">Animals</h1>
+      <p class="py-6 -mt-4">Our beloved life companions.</p>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-2 sm:grid-cols-5 justify-items-center">
+    {% for animal in SITE_DATA.animals %}
+        <div class="mb-8">
+            {% set status = "online" if animal.alive else "" %}
+            <div class="avatar {{ status }}">
+                 <div class="w-24  mask mask-circle">
+                     {% if animal.alive %}
+                        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/animals/{{ animal.avatar }}">
+                     {% else %}
+                         <img class="grayscale" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/animals/{{ animal.avatar }}">
+                     {%  endif %}
+                 </div>
+            </div>
+            <div class="text-sm text-center">{{  animal.name }}</div>
+        </div>
+    {% endfor %}
+</div>

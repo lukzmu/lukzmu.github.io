@@ -1,0 +1,40 @@
+image: python:3.11-alpine
+
+before_script:
+  - export PYTHONPATH="$PYTHONPATH:./src"
+  - pip install poetry
+  - poetry config virtualenvs.in-project true
+  - poetry install
+
+cache:
+  paths:
+    - .venv
+
+stages:
+  - test
+  - deploy
+
+black:
+  stage: test
+  script:
+    - source .venv/bin/activate
+    - black --check --diff .
+
+ruff:
+  stage: test
+  script:
+    - source .venv/bin/activate
+    - ruff .
+
+pages:
+  stage: deploy
+  script:
+    - source .venv/bin/activate
+    - cd src
+    - pelican content -s core/settings.py -o ../public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  environment: production
