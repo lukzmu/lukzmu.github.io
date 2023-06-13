@@ -26,6 +26,12 @@ ruff:
     - source .venv/bin/activate
     - ruff .
 
+mypy:
+  stage: test
+  script:
+    - source .venv/bin/activate
+    - mypy src/
+
 pages:
   stage: deploy
   script:
