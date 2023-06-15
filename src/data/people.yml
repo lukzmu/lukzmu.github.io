@@ -2,9 +2,6 @@ items:
   - name: Łukasz
     avatar: lukasz.png
     title: Software Engineer
-    social:
-      - icon: fa-brands fa-gitlab
-        link: https://gitlab.com/lukzmu/
   - name: Anna
     avatar: ania.png
     title: Animal Sciences PhD

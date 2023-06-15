@@ -19,10 +19,5 @@ class AnimalRepository:
 
             return sorted(animals, key=lambda x: (-x.alive, x.name))
 
-    def get_animal_count(self) -> int:
-        with open(self._data_path) as file:
-            data = yaml.safe_load(file)
-            return len(data["items"])
-
 
 animal_repository = AnimalRepository(data_path="data/animals.yml")

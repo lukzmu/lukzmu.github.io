@@ -12,15 +12,6 @@
                 <div class="-mt-2 text-xs">
                     {{ person.title }}
                 </div>
-                <div class="join mt-4">
-                    {% for social in person.social_media %}
-                    <a class="join-item" href="{{ social.link }}" target="_blank">
-                        <button class="btn bg-base-300 hover:text-green-500">
-                            <i class="{{ social.icon }} fa-md"></i>
-                        </button>
-                    </a>
-                    {% endfor %}
-                </div>
             </div>
         </div>
     {% endfor %}

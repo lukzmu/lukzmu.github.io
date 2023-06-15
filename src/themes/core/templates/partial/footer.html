@@ -2,5 +2,14 @@
   <div class="text-center">
       <p>&copy; {{ SITE_DATA.year }} zmudzinski.me</p>
       <p class="text-xs">From Poland with 💚</p>
+      <div class="mt-4">
+        {% for footer_link in SITE_DATA.footer_links %}
+        <a href="{{ footer_link.link }}" target="_blank">
+            <button class="btn bg-base-300 hover:text-green-500">
+                <i class="{{ footer_link.icon }} fa-md"></i>
+            </button>
+        </a>
+        {% endfor %}
+      </div>
   </div>
 </div>

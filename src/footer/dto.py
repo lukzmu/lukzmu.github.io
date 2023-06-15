@@ -2,7 +2,6 @@ from dataclasses import dataclass
 
 
 @dataclass(frozen=True)
-class Person:
-    name: str
-    avatar: str
-    title: str
+class FooterLink:
+    icon: str
+    link: str
