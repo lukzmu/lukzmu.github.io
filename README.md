@@ -2,7 +2,7 @@
 
 Żmudziński family website written using Python thanks to the Pelican package. The website shows our family members, animals and history.
 
-The deployment is done through pipelines (check `.gitlab-ci.yml`) and posted on GitLab Pages.
+The deployment is done through Github Actions and posted on GitHub Pages.
 
 ## Requirements
 

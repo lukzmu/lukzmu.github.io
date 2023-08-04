@@ -1,0 +1,57 @@
+name: 'Publish family website to Github Pages'
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ✅ Checkout repository
+        uses: actions/checkout@v3
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: 💾 Install dependencies
+        run: |
+          pip install poetry
+          poetry config virtualenvs.in-project true
+          poetry install --only dev
+      - name: 👌🏻 Check linters
+        run: |   
+          source .venv/bin/activate       
+          black --check --diff src/
+          ruff src/
+          mypy src/
+      
+  publish:
+    runs-on: ubuntu-latest
+    needs: [test]
+    steps:
+      - name: ✅ Checkout repository
+        uses: actions/checkout@v3
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: 💾 Install dependencies
+        run: |
+          echo "PYTHONPATH=$PYTHONPATH:./src" >> $GITHUB_ENV
+          pip install poetry
+          poetry config virtualenvs.in-project true
+          poetry install --without dev          
+      - name: 🌟 Create page content
+        run: |
+          source .venv/bin/activate
+          cd src
+          pelican content -s core/settings.py -o ~/public
+      - name: 🚀 Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ~/public
