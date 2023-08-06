@@ -2,8 +2,7 @@ name: 'Publish family website to Github Pages'
 
 on:
   push:
-    branches:
-      - main
+  pull_request:
   workflow_dispatch:
 permissions:
   contents: write
@@ -32,7 +31,8 @@ jobs:
       
   publish:
     runs-on: ubuntu-latest
-    needs: [test]
+    needs: test
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: ✅ Checkout repository
         uses: actions/checkout@v3

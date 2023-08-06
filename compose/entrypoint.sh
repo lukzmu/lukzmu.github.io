@@ -19,11 +19,5 @@ elif [ "$1" = 'fmt' ]; then
     echo "-- black --" && black $OPTS
     echo "-- ruff --" && ruff --fix $OPTS
     exit 0
-elif [ "$1" = 'release' ]; then
-    shift
-    cd src
-    export SITEURL=https://lukzmu.github.io
-    exec python -m pelican content -s core/settings.py -o output
-fi
 
 exec "$@"
