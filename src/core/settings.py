@@ -3,7 +3,6 @@ from datetime import datetime
 
 from animal.repository import animal_repository
 from event.repository import event_repository
-from footer.repository import footer_repository
 from person.repository import person_repository
 
 # --- Site Data ---
@@ -36,6 +35,6 @@ SITE_DATA = {
     "people": person_repository.get_people_list(),
     "animals": animal_repository.get_animals_list(),
     "events": event_repository.get_event_list(),
-    "footer_links": footer_repository.get_footer_link_list(),
+    "github_link": "https://github.com/lukzmu/family-website",
     "year": datetime.now().year,
 }

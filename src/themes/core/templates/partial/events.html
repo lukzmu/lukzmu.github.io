@@ -1,27 +1,38 @@
-<div id="timeline" class="hero h-96">
-  <div class="hero-content text-center">
-    <div class="max-w-md">
-      <h1 class="text-3xl font-bold">Timeline</h1>
-      <p class="py-6 -mt-4">Events important to us.</p>
-    </div>
-  </div>
-</div>
+<div class="bg-white pt-24 sm:pt-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
-<div class="container grid place-items-center mb-32">
-    <ul class="steps steps-vertical">
-        {% for event in SITE_DATA.events %}
-            {% set sub_margin = "mt-6 mb-6" if event.subtitle else "" %}
-            {% set font_style = "font-bold" if event.important else "" %}
-            {% set font_color = "text-green-500" if event.important else "" %}
-            <li data-content="{{ event.icon }}" class="step">
-                <div class="grid grid-cols-1 justify-items-start {{ sub_margin }}">
-                    <div class="text-sm font-thin">{{ event.date }}</div>
-                    <div class="text-sm {{ font_style }} {{ font_color }}">{{ event.title }}</div>
-                    {% if event.subtitle %}
-                        <div class="text-xs">{{ event.subtitle }}</div>
-                    {% endif %}                        
-                </div>                    
-            </li>
-        {% endfor %}
+    <div class="bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-4xl font-bold tracking-tight text-gray-900">Timeline</h2>
+        <p class="mt-6 text-lg leading-8 text-gray-600">Events important to us.</p>
+      </div>
+    </div>
+
+    <ul role="list" class="space-y-6 max-w-2xl mx-auto">
+      {% for event in SITE_DATA.events %}
+      <li class="relative flex gap-x-4">
+        {% if loop.last %}
+        <div class="absolute left-0 top-0 flex w-6 justify-center">
+        {% else %}
+        <div class="absolute left-0 top-0 flex w-6 justify-center -bottom-6">
+        {% endif %}
+          <div class="w-px bg-gray-200"></div>
+        </div>
+        {% if event.important %}
+        <div class="relative flex h-6 w-6 flex-none items-center justify-center bg-white">
+          <div class="h-1.5 w-1.5 rounded-full bg-green-400 ring-1 ring-green-400"></div>
+        </div>
+        <p class="flex-auto font-medium py-0.5 text-xs leading-5">{{ event.title }}</p>
+        {% else %}
+        <div class="relative flex h-6 w-6 flex-none items-center justify-center bg-white">
+          <div class="h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300"></div>
+        </div>
+        <p class="flex-auto py-0.5 text-xs leading-5 text-gray-500">{{ event.title }}</p>
+        {% endif %}        
+        <time class="flex-none py-0.5 text-xs leading-5 text-gray-500">{{ event.date }}</time>
+      </li>
+      {% endfor %}
     </ul>
+    
+  </div>
 </div>

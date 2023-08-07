@@ -1,26 +1,28 @@
-<div id="animals" class="hero h-96">
-  <div class="hero-content text-center">
-    <div class="max-w-md">
-      <h1 class="text-3xl font-bold">Animals</h1>
-      <p class="py-6 -mt-4">Our beloved life companions.</p>
-    </div>
-  </div>
-</div>
+<div class="bg-white pt-24 sm:pt-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
-<div class="grid grid-cols-2 sm:grid-cols-5 justify-items-center">
-    {% for animal in SITE_DATA.animals %}
-        <div class="mb-8">
-            {% set status = "online" if animal.alive else "" %}
-            <div class="avatar {{ status }}">
-                 <div class="w-24  mask mask-circle">
-                     {% if animal.alive %}
-                        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/animals/{{ animal.avatar }}">
-                     {% else %}
-                         <img class="grayscale" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/animals/{{ animal.avatar }}">
-                     {%  endif %}
-                 </div>
-            </div>
-            <div class="text-sm text-center">{{  animal.name }}</div>
-        </div>
-    {% endfor %}
+    <div class="bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-4xl font-bold tracking-tight text-gray-900">Animals</h2>
+        <p class="mt-6 text-lg leading-8 text-gray-600">Our beloved life companions.</p>
+      </div>
+    </div>
+    
+    <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-16 text-center sm:grid-cols-3 md:grid-cols-4 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+      {% for animal in SITE_DATA.animals %}
+      <li>
+        {% if animal.alive %}
+        <span class="relative inline-block">
+          <img class="mx-auto h-24 w-24 rounded-full" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/animals/{{ animal.avatar }}" alt="{{ animal.name }}">
+          <span class="absolute right-1 top-1 block h-4 w-4 rounded-full bg-green-400 ring-2 ring-white"></span>
+        </span>
+        
+        {% else %}
+        <img class="mx-auto h-24 w-24 rounded-full grayscale" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/animals/{{ animal.avatar }}" alt="{{ animal.name }}">
+        {%  endif %}
+        <h3 class="mt-2 text-base leading-7 tracking-tight text-gray-900">{{ animal.name }}</h3>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>

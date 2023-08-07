@@ -19,5 +19,6 @@ elif [ "$1" = 'fmt' ]; then
     echo "-- black --" && black $OPTS
     echo "-- ruff --" && ruff --fix $OPTS
     exit 0
+fi
 
 exec "$@"
