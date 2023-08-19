@@ -1,14 +1,16 @@
 <ul role="list" class="grid 2xl:grid-cols-[repeat(auto-fit,_25%)] m-auto mt-20 justify-center gap-6">
-    {% for person in SITE_DATA.people %}
-    <li class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow">
-      <div class="flex flex-1 flex-col p-8">
-        <img class="mx-auto h-32 w-32 flex-shrink-0" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/people/{{ person.avatar }}" alt="">
-        <h3 class="mt-6 text-lg font-medium text-gray-900">{{ person.name }}</h3>
-        <dl class="mt-1 flex flex-grow flex-col justify-between">
-          <dt class="sr-only">Title</dt>
-          <dd class="text-sm text-gray-500">{{ person.title }}</dd>
-        </dl>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
+  {% for person in SITE_DATA.people %}
+  <li
+    class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white dark:bg-neutral-900 text-center shadow">
+    <div class="flex flex-1 flex-col p-8">
+      <img class="mx-auto h-32 w-32 flex-shrink-0"
+        src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/people/{{ person.avatar }}" alt="">
+      <h3 class="mt-6 text-lg font-medium text-gray-900 dark:text-neutral-100">{{ person.name }}</h3>
+      <dl class="mt-1 flex flex-grow flex-col justify-between">
+        <dt class="sr-only">Title</dt>
+        <dd class="text-sm text-gray-600 dark:text-neutral-500">{{ person.title }}</dd>
+      </dl>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
