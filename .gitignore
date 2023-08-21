@@ -161,3 +161,6 @@ cython_debug/
 
 # Pelican
 src/output/
+
+# Coverage
+coverage.json

@@ -19,6 +19,11 @@ elif [ "$1" = 'fmt' ]; then
     echo "-- black --" && black $OPTS
     echo "-- ruff --" && ruff --fix $OPTS
     exit 0
+elif [ "$1" = 'test' ]; then
+    shift
+    OPTS=${@:-'src/'}
+    echo "-- bandit --" && bandit -r $OPTS
+    echo "-- pytest --" && pytest --cov=src --cov-report=json
 fi
 
 exec "$@"
