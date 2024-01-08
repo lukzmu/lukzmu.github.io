@@ -1,6 +1,6 @@
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lukzmu/family-website/pages.yml)
-![Codecov](https://img.shields.io/codecov/c/github/lukzmu/family-website)
-![GitHub](https://img.shields.io/github/license/lukzmu/family-website)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/divinebanana/family-website/pages.yml)
+![Codecov](https://img.shields.io/codecov/c/github/divinebanana/family-website)
+![GitHub](https://img.shields.io/github/license/divinebanana/family-website)
 
 # Family Website
 

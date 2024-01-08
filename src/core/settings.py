@@ -35,6 +35,6 @@ SITE_DATA = {
     "people": person_repository.get_people_list(),
     "animals": animal_repository.get_animals_list(),
     "events": event_repository.get_event_list(),
-    "github_link": "https://github.com/lukzmu/family-website",
+    "github_link": "https://github.com/divinebanana/family-website",
     "year": datetime.now().year,
 }
