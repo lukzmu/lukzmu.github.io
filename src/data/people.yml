@@ -9,6 +9,9 @@ items:
       - name: LinkedIn
         icon: linkedin
         url: https://www.linkedin.com/in/lukzmu/
+      - name: Mastodon
+        icon: mastodon
+        url: https://techtoots.com/@lukzmu
       - name: World of Warcraft
         icon: wow
         url: https://worldofwarcraft.blizzard.com/en-gb/character/eu/burning-legion/divinebanana
