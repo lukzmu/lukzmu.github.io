@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 
 @dataclass(frozen=True)
-class Person:
+class SocialMedia:
     name: str
-    avatar: str
-    title: str
+    icon: str
+    url: str

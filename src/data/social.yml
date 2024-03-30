@@ -1,0 +1,10 @@
+items:
+  - name: GitLab
+    icon: gitlab
+    url: https://gitlab.com/lukasz.zmudzinski
+  - name: LinkedIn
+    icon: linkedin
+    url: https://www.linkedin.com/in/lukzmu/
+  - name: Mastodon
+    icon: mastodon
+    url: https://techtoots.com/@lukzmu

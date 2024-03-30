@@ -1,6 +1,6 @@
 from typing import Any, Dict
 
-from person.dto import Person, SocialMedia
+from person.dto import Person
 
 
 class PersonMapper:
@@ -10,12 +10,4 @@ class PersonMapper:
             name=person["name"],
             avatar=person["avatar"],
             title=person["title"],
-            social_media=[
-                SocialMedia(
-                    name=social_media["name"],
-                    icon=social_media["icon"],
-                    url=social_media["url"],
-                )
-                for social_media in person.get("social_media", [])
-            ],
         )
