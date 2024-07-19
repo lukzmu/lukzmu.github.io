@@ -3,7 +3,6 @@ import os
 from animal.repository import animal_repository
 from event.repository import event_repository
 from person.repository import person_repository
-from social.repository import social_media_repository
 
 # --- Site Data ---
 SITEURL = os.getenv("SITEURL", default="https://zmudzinski.me")
@@ -35,5 +34,4 @@ SITE_DATA = {
     "people": person_repository.get_people_list(),
     "animals": animal_repository.get_animals_list(),
     "events": event_repository.get_event_list(),
-    "social_media": social_media_repository.get_social_media_list(),
 }

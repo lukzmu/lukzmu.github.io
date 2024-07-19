@@ -1,27 +1,7 @@
 <footer>
   <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
-    <span class="isolate rounded-md shadow-sm mt-8 flex justify-center ">
-      {% for social_media in SITE_DATA.social_media %}
-      <a href="{{ social_media.url }}" target="_blank" rel="me">
-        {% if loop.first %}
-        <button type="button"
-          class="relative inline-flex items-center rounded-l-md bg-white dark:bg-neutral-900 px-3 py-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 ring-1 ring-inset ring-neutral-300 dark:ring-neutral-500 hover:bg-neutral-50 dark:hover:bg-neutral-800 focus:z-10">
-          {% elif loop.last %}
-          <button type="button"
-            class="relative -ml-px inline-flex items-center rounded-r-md bg-white dark:bg-neutral-900 px-3 py-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 ring-1 ring-inset ring-neutral-300 dark:ring-neutral-500 hover:bg-neutral-50 dark:hover:bg-neutral-800 focus:z-10">
-            {% else %}
-            <button type="button"
-              class="relative -ml-px inline-flex items-center bg-white dark:bg-neutral-900 px-3 py-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 ring-1 ring-inset ring-neutral-300 dark:ring-neutral-500 hover:bg-neutral-50 dark:hover:bg-neutral-800 focus:z-10">
-              {% endif %}
-
-              <svg class="w-4 h-4 fill-neutral-900 dark:fill-neutral-100">
-                <use
-                  xlink:href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/icons/{{ social_media.icon }}.svg#{{ social_media.icon }}">
-                </use>
-              </svg>
-            </button>
-      </a>
-      {% endfor %}
+    <span class="text-sm text-neutral-600 dark:text-neutral-500 flex justify-center">
+      From Poland with Love.
     </span>
   </div>
 </footer>

@@ -12,3 +12,4 @@ class TestPersonMapper:
         assert result.name == selected_person["name"]
         assert result.avatar == selected_person["avatar"]
         assert result.title == selected_person["title"]
+        assert result.social[0].name == selected_person["social"][0]["name"]

@@ -18,6 +18,13 @@ def person_data():
                 "name": "Łukasz",
                 "avatar": "lukasz.png",
                 "title": "Python Engineer",
+                "social": [
+                    {
+                        "name": "GitHub",
+                        "url": "https://github.com/zmudzinski-me",
+                        "icon": "github",
+                    }
+                ],
             },
             {
                 "name": "Anna",
