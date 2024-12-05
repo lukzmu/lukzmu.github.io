@@ -6,19 +6,13 @@ items:
       - name: GitHub
         url: https://github.com/lukzmu
         icon: github
-      - name: LinkedIn
-        url: https://www.linkedin.com/in/lukzmu/
-        icon: linkedin
-      - name: Instagram
-        url: https://www.instagram.com/bananrysuje/
-        icon: instagram      
+      - name: BlueSky
+        url: https://bsky.app/profile/zmudzinski.me
+        icon: bluesky
+
   - name: Anna
     avatar: ania.jpg
     title: Animal Sciences PhD
-    social:
-      - name: Instagram
-        url: https://www.instagram.com/to_be_have/
-        icon: instagram
   - name: Alicja
     avatar: alicja.jpeg
     title: Future Rocket Scientist
