@@ -5,7 +5,6 @@ from datetime import date
 @dataclass(frozen=True)
 class Event:
     title: str
-    icon: str
     date: date
     important: bool
 

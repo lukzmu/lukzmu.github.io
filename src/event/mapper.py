@@ -9,7 +9,6 @@ class EventMapper:
     def dict_to_dto(event: Dict[str, Any]) -> Event:
         return Event(
             title=event["title"],
-            icon=event["icon"],
             date=datetime.strptime(event["date"], "%Y.%m.%d").date(),
             important=event.get("important", False),
         )

@@ -16,12 +16,10 @@ def event_data():
         "items": [
             {
                 "title": "Anna and Łukasz get engaged",
-                "icon": "💍",
                 "date": "2017.09.15",
             },
             {
                 "title": "Anna and Łukasz get married",
-                "icon": "👰🏻‍♀️",
                 "date": "2021.05.04",
             },
         ]
