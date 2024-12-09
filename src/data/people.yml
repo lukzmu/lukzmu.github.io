@@ -6,9 +6,9 @@ items:
       - name: GitHub
         url: https://github.com/lukzmu
         icon: github
-      - name: BlueSky
-        url: https://bsky.app/profile/zmudzinski.me
-        icon: bluesky
+      - name: X
+        url: https://x.com/lukzmu
+        icon: x
 
   - name: Anna
     avatar: ania.jpg
