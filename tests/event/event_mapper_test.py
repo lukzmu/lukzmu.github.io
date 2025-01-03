@@ -12,4 +12,5 @@ class TestEventMapper:
 
         assert type(result) is Event
         assert result.title == selected_event["title"]
+        assert result.icon == selected_event["icon"]
         assert isinstance(result.date, date)
